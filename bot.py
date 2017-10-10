@@ -5,9 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 pd.set_option('display.max_colwidth',200)
 df=pd.read_csv('a.csv')
-df
 convo = df.iloc[:,0]
-convo
 clist = []
 
 def qa_pairs(x):
@@ -22,11 +20,8 @@ vec = vectorizer.fit_transform(convo_frame['q'])
 
 def get_response(q):
   my_q = vectorizer.transform([q])
-  
   cs = cosine_similarity(my_q, vec)
-  
   rs = pd.Series(cs[0]).sort_values(ascending=False)
-  
   rsi = rs.index[0]
   return convo_frame.iloc[rsi]['a']
 print("Hey!")
