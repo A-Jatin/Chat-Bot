@@ -4,7 +4,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 pd.set_option('display.max_colwidth',200)
-df=pd.read_csv('C:/Users/Jatin/downloads/a.csv',encoding='latin-1')
+df=pd.read_csv('a.csv')
 df
 convo = df.iloc[:,0]
 convo
