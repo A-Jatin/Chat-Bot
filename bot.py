@@ -26,7 +26,7 @@ def get_response(q):
   return convo_frame.iloc[rsi]['a']
 print("Hey!")
 
-while(1==1):
+while(1 is 1):
     
     ans=input()
     if(ans=="exit" or ans== "Exit"):
